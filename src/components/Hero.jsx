@@ -3,6 +3,7 @@ function Hero() {
     <section className="hero" id="home">
       <div className="hero-container">
 
+        {/* HERO CONTENT */}
         <div className="hero-content">
 
           <span className="hero-tag">
@@ -23,30 +24,44 @@ function Hero() {
             using HTML, CSS, JavaScript and React.
           </p>
 
+          {/* BUTTONS */}
           <div className="hero-buttons">
-            <a href="#projects" className="btn-primary">
+
+            <a
+              href="#projects"
+              className="btn-primary"
+            >
               View My Work
             </a>
 
-            <a href="#contact" className="btn-secondary">
+            <a
+              href="#contact"
+              className="btn-secondary"
+            >
               Contact Me
             </a>
+
           </div>
 
         </div>
 
+        {/* HERO IMAGE */}
         <div className="hero-image">
+
           <div className="image-box">
+
             <img
               src="/Amina Batool.png"
-              alt="Amina Batool"
+              alt="Amina Batool - Frontend Developer"
             />
+
           </div>
+
         </div>
 
       </div>
     </section>
-  )
+  );
 }
 
-export default Hero
+export default Hero;

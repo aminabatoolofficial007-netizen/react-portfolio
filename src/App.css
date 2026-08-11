@@ -1,13 +1,13 @@
-/* ==================================================
+/* =========================================================
    GOOGLE FONT
-================================================== */
+========================================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 
-/* ==================================================
+/* =========================================================
    CSS VARIABLES
-================================================== */
+========================================================= */
 
 :root {
   --primary: #6366F1;
@@ -33,9 +33,9 @@
 }
 
 
-/* ==================================================
+/* =========================================================
    RESET
-================================================== */
+========================================================= */
 
 * {
   margin: 0;
@@ -68,10 +68,16 @@ ul {
   list-style: none;
 }
 
+button,
+input,
+textarea {
+  font-family: inherit;
+}
 
-/* ==================================================
+
+/* =========================================================
    BACKGROUND EFFECT
-================================================== */
+========================================================= */
 
 body::before {
   content: "";
@@ -120,9 +126,9 @@ body::after {
 }
 
 
-/* ==================================================
+/* =========================================================
    CONTAINER
-================================================== */
+========================================================= */
 
 .container {
   width: 90%;
@@ -131,18 +137,18 @@ body::after {
 }
 
 
-/* ==================================================
+/* =========================================================
    SECTION
-================================================== */
+========================================================= */
 
 section {
   padding: 110px 0;
 }
 
 
-/* ==================================================
+/* =========================================================
    SECTION TITLE
-================================================== */
+========================================================= */
 
 .section-title {
   text-align: center;
@@ -185,9 +191,9 @@ section {
 }
 
 
-/* ==================================================
+/* =========================================================
    BUTTONS
-================================================== */
+========================================================= */
 
 .btn-primary {
   display: inline-block;
@@ -241,9 +247,9 @@ section {
 }
 
 
-/* ==================================================
+/* =========================================================
    HEADER
-================================================== */
+========================================================= */
 
 header {
   position: fixed;
@@ -263,9 +269,9 @@ header {
 }
 
 
-/* ==================================================
+/* =========================================================
    NAVBAR
-================================================== */
+========================================================= */
 
 .navbar {
   width: 90%;
@@ -344,9 +350,30 @@ header {
 }
 
 
-/* ==================================================
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.menu-toggle {
+  display: none;
+
+  background: transparent;
+
+  border: none;
+
+  color: white;
+
+  font-size: 26px;
+
+  cursor: pointer;
+
+  z-index: 1001;
+}
+
+
+/* =========================================================
    HERO SECTION
-================================================== */
+========================================================= */
 
 .hero {
   min-height: 100vh;
@@ -469,9 +496,9 @@ header {
 }
 
 
-/* ==================================================
+/* =========================================================
    HERO IMAGE
-================================================== */
+========================================================= */
 
 .hero-image {
   flex: 1;
@@ -519,9 +546,9 @@ header {
 }
 
 
-/* ==================================================
+/* =========================================================
    ABOUT SECTION
-================================================== */
+========================================================= */
 
 .about-preview,
 .journey,
@@ -554,9 +581,9 @@ header {
 }
 
 
-/* ==================================================
+/* =========================================================
    ABOUT INFO
-================================================== */
+========================================================= */
 
 .about-info {
   display: grid;
@@ -603,9 +630,9 @@ header {
 }
 
 
-/* ==================================================
+/* =========================================================
    SKILLS
-================================================== */
+========================================================= */
 
 .skills-preview {
   background: var(--dark);
@@ -716,9 +743,9 @@ header {
 }
 
 
-/* ==================================================
+/* =========================================================
    ICON COLORS
-================================================== */
+========================================================= */
 
 .fa-html5 {
   color: #E34F26;
@@ -753,9 +780,9 @@ header {
 }
 
 
-/* ==================================================
+/* =========================================================
    SKILL PROGRESS
-================================================== */
+========================================================= */
 
 .progress-container {
   max-width: 900px;
@@ -834,9 +861,9 @@ header {
 }
 
 
-/* ==================================================
+/* =========================================================
    ANIMATIONS
-================================================== */
+========================================================= */
 
 @keyframes float {
   0% {
@@ -869,7 +896,8 @@ header {
 .about-grid,
 .skills-grid {
   animation: fadeUp 0.8s ease;
-}/* ==================================================
+}
+/* ==================================================
    PROJECTS
 ================================================== */
 
@@ -879,40 +907,29 @@ header {
 
 .projects-grid {
   display: grid;
-
   grid-template-columns: repeat(3, 1fr);
-
   gap: 35px;
 }
 
 .project-card {
   background: var(--card);
-
   border: 1px solid var(--border);
-
   border-radius: 20px;
-
   overflow: hidden;
-
   transition: var(--transition);
-
   box-shadow: var(--shadow);
 }
 
 .project-card:hover {
   transform: translateY(-12px);
-
   border-color: var(--primary);
 }
 
 .project-card img {
   width: 100%;
-
   height: 230px;
-
   object-fit: cover;
-
-  transition: 0.5s;
+  transition: 0.5s ease;
 }
 
 .project-card:hover img {
@@ -925,36 +942,27 @@ header {
 
 .project-content h3 {
   font-size: 26px;
-
   margin-bottom: 15px;
 }
 
 .project-content p {
   color: var(--gray);
-
   line-height: 1.8;
-
   margin-bottom: 25px;
 }
 
 .project-buttons {
   display: flex;
-
   gap: 15px;
 }
 
 .project-buttons a {
   flex: 1;
-
   text-align: center;
-
   padding: 12px;
-
   border-radius: 50px;
-
   font-weight: 600;
-
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .demo-btn {
@@ -963,7 +971,6 @@ header {
     var(--primary),
     var(--secondary)
   );
-
   color: white;
 }
 
@@ -986,17 +993,13 @@ header {
 
 .dt-perfume-section {
   background: var(--dark);
-
   padding: 110px 0;
 }
 
 .dt-perfume-card {
   display: grid;
-
   grid-template-columns: 1fr 1fr;
-
   align-items: center;
-
   gap: 60px;
 
   background: linear-gradient(
@@ -1006,21 +1009,16 @@ header {
   );
 
   border: 1px solid var(--border);
-
   border-radius: 30px;
-
   padding: 50px;
 
   overflow: hidden;
-
   box-shadow: var(--shadow);
-
   transition: var(--transition);
 }
 
 .dt-perfume-card:hover {
   transform: translateY(-8px);
-
   border-color: var(--primary);
 }
 
@@ -1028,10 +1026,10 @@ header {
   position: relative;
 
   display: flex;
-
   justify-content: center;
-
   align-items: center;
+
+  min-width: 0;
 }
 
 .dt-perfume-image::before {
@@ -1040,7 +1038,6 @@ header {
   position: absolute;
 
   width: 330px;
-
   height: 330px;
 
   background: radial-gradient(
@@ -1050,23 +1047,18 @@ header {
   );
 
   filter: blur(20px);
-
   z-index: 0;
 }
 
 .dt-perfume-image img {
   position: relative;
-
   z-index: 1;
 
   width: 100%;
-
   max-width: 500px;
-
   height: 350px;
 
   object-fit: cover;
-
   border-radius: 22px;
 
   border: 1px solid var(--border);
@@ -1083,35 +1075,30 @@ header {
 
 .dt-perfume-content {
   padding: 10px;
+  min-width: 0;
 }
 
 .dt-perfume-tag {
   display: inline-block;
 
   padding: 8px 18px;
-
   margin-bottom: 18px;
 
   border-radius: 50px;
 
   background: rgba(99, 102, 241, 0.15);
-
   color: var(--accent);
 
   font-size: 14px;
-
   font-weight: 600;
 
   letter-spacing: 1px;
-
   text-transform: uppercase;
 }
 
 .dt-perfume-content h2 {
   font-size: 42px;
-
   line-height: 1.2;
-
   margin-bottom: 20px;
 }
 
@@ -1153,7 +1140,6 @@ header {
 
 .dt-feature i {
   color: var(--accent);
-
   font-size: 18px;
 }
 
@@ -1163,6 +1149,8 @@ header {
   gap: 15px;
 
   margin-top: 30px;
+
+  flex-wrap: wrap;
 }
 
 .dt-live-btn,
@@ -1170,7 +1158,6 @@ header {
   display: inline-flex;
 
   align-items: center;
-
   justify-content: center;
 
   gap: 10px;
@@ -1203,13 +1190,11 @@ header {
 
 .dt-github-btn {
   border: 2px solid var(--primary);
-
   color: white;
 }
 
 .dt-github-btn:hover {
   background: var(--primary);
-
   transform: translateY(-5px);
 }
 
@@ -1236,7 +1221,7 @@ header {
 
   font-size: 13px;
 
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .dt-tech:hover {
@@ -1291,7 +1276,7 @@ header {
 
   object-fit: cover;
 
-  transition: 0.5s;
+  transition: 0.5s ease;
 }
 
 .certificate-card:hover img {
@@ -1404,6 +1389,15 @@ header {
   margin: 0;
 }
 
+
+/* ==================================================
+   CONTACT FORM
+================================================== */
+
+.contact-right form {
+  width: 100%;
+}
+
 .input-group {
   margin-bottom: 22px;
 }
@@ -1428,12 +1422,19 @@ header {
 
   font-family: inherit;
 
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .input-group input::placeholder,
 .input-group textarea::placeholder {
   color: #9ca3af;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: var(--primary);
+
+  background: #202b40;
 }
 
 .input-group textarea {
@@ -1442,9 +1443,8 @@ header {
   min-height: 180px;
 }
 
-.input-group input:focus,
-.input-group textarea:focus {
-  border-color: var(--primary);
+.contact-right button {
+  width: 100%;
 }
 
 
@@ -1531,7 +1531,7 @@ footer {
 .footer-links a {
   color: var(--gray);
 
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .footer-links a:hover {
@@ -1902,8 +1902,6 @@ footer {
     transform: translateY(0);
   }
 }
-
-
 /* ==================================================
    LARGE LAPTOP - 1200px
 ================================================== */
@@ -1924,6 +1922,21 @@ footer {
     width: 380px;
     height: 380px;
   }
+
+  .dt-perfume-card {
+    gap: 40px;
+    padding: 40px;
+  }
+
+  .dt-perfume-content h2 {
+    font-size: 38px;
+  }
+
+  .projects-grid,
+  .skills-grid,
+  .certificate-grid {
+    gap: 25px;
+  }
 }
 
 
@@ -1933,9 +1946,14 @@ footer {
 
 @media (max-width: 992px) {
 
+  section {
+    padding: 90px 0;
+  }
+
+  /* ---------- HERO ---------- */
+
   .hero-container {
     display: flex;
-
     flex-direction: column-reverse;
 
     text-align: center;
@@ -1947,51 +1965,81 @@ footer {
     width: 100%;
   }
 
+  .hero-image {
+    width: 100%;
+    justify-content: center;
+  }
+
   .hero-buttons {
     justify-content: center;
-
     flex-wrap: wrap;
   }
 
   .hero-stats {
     justify-content: center;
-
     flex-wrap: wrap;
   }
 
+
+  /* ---------- ABOUT ---------- */
+
   .about-grid {
     grid-template-columns: 1fr;
+
+    gap: 40px;
   }
 
   .about-info {
     grid-template-columns: repeat(2, 1fr);
   }
 
+
+  /* ---------- SKILLS ---------- */
+
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+
+  /* ---------- PROJECTS ---------- */
 
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
+
+  /* ---------- CERTIFICATES ---------- */
+
   .certificate-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
+
+  /* ---------- CONTACT ---------- */
+
   .contact-wrapper {
     grid-template-columns: 1fr;
+
+    gap: 30px;
   }
+
+
+  /* ---------- FOOTER ---------- */
 
   .footer-container {
     grid-template-columns: 1fr;
 
     text-align: center;
+
+    gap: 40px;
   }
 
   .social-icons {
     justify-content: center;
   }
+
+
+  /* ---------- PROGRESS ---------- */
 
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -2005,10 +2053,35 @@ footer {
     min-height: 260px;
   }
 
+
+  /* ---------- DT PERFUME ---------- */
+
   .dt-perfume-card {
     grid-template-columns: 1fr;
 
     gap: 40px;
+
+    text-align: center;
+  }
+
+  .dt-perfume-image {
+    width: 100%;
+  }
+
+  .dt-perfume-image img {
+    margin: auto;
+  }
+
+  .dt-perfume-features {
+    text-align: left;
+  }
+
+  .dt-perfume-buttons {
+    justify-content: center;
+  }
+
+  .dt-technologies {
+    justify-content: center;
   }
 }
 
@@ -2019,20 +2092,107 @@ footer {
 
 @media (max-width: 768px) {
 
+  /* ---------- GENERAL ---------- */
+
+  section {
+    padding: 80px 0;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+
+  /* ---------- NAVBAR ---------- */
+
   .navbar {
     height: 75px;
   }
 
+  .logo {
+    font-size: 26px;
+  }
+
   .nav-links {
     display: none;
+
+    position: absolute;
+
+    top: 75px;
+    left: 0;
+
+    width: 100%;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 0;
+
+    padding: 20px 0;
+
+    background: rgba(11, 16, 32, 0.98);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(20px);
+  }
+
+  .nav-links.show-menu {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+
+    text-align: center;
+  }
+
+  .nav-links a {
+    display: block;
+
+    width: 100%;
+
+    padding: 14px 20px;
+  }
+
+  .nav-links a:hover {
+    background: rgba(99, 102, 241, 0.12);
   }
 
   .resume-btn {
     display: none;
   }
 
+  .menu-toggle {
+    display: block;
+
+    margin-left: auto;
+
+    margin-right: 15px;
+
+    background: transparent;
+
+    border: none;
+
+    color: white;
+
+    font-size: 26px;
+
+    cursor: pointer;
+
+    z-index: 1001;
+  }
+
+
+  /* ---------- HERO ---------- */
+
   .hero {
     padding-top: 120px;
+
+    min-height: auto;
+
+    padding-bottom: 80px;
   }
 
   .hero-content h1 {
@@ -2057,9 +2217,50 @@ footer {
     height: 320px;
   }
 
+  .hero-buttons {
+    flex-direction: column;
+
+    align-items: center;
+
+    width: 100%;
+  }
+
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-secondary {
+    width: min(100%, 280px);
+
+    text-align: center;
+
+    margin-left: 0;
+  }
+
+  .hero-stats {
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 30px;
+  }
+
+
+  /* ---------- SECTION TITLE ---------- */
+
+  .section-title {
+    margin-bottom: 50px;
+  }
+
+  .section-title span {
+    font-size: 14px;
+
+    letter-spacing: 3px;
+  }
+
   .section-title h2 {
     font-size: 38px;
   }
+
+
+  /* ---------- ABOUT ---------- */
 
   .about-content h3 {
     font-size: 32px;
@@ -2069,34 +2270,46 @@ footer {
     grid-template-columns: 1fr;
   }
 
+
+  /* ---------- SKILLS ---------- */
+
   .skills-grid {
     grid-template-columns: 1fr;
   }
+
+
+  /* ---------- PROJECTS ---------- */
 
   .projects-grid {
     grid-template-columns: 1fr;
   }
 
+  .project-card img {
+    height: 240px;
+  }
+
+
+  /* ---------- CERTIFICATES ---------- */
+
   .certificate-grid {
     grid-template-columns: 1fr;
   }
 
-  .experience-card ul {
-    grid-template-columns: 1fr;
-  }
 
-  .hero-buttons {
-    flex-direction: column;
+  /* ---------- DT PERFUME ---------- */
 
-    align-items: center;
-  }
-
-  .btn-secondary {
-    margin-left: 0;
+  .dt-perfume-section {
+    padding: 80px 0;
   }
 
   .dt-perfume-card {
     padding: 35px 25px;
+
+    border-radius: 25px;
+  }
+
+  .dt-perfume-content {
+    padding: 0;
   }
 
   .dt-perfume-content h2 {
@@ -2110,6 +2323,23 @@ footer {
   .dt-perfume-buttons {
     flex-wrap: wrap;
   }
+
+
+  /* ---------- CONTACT ---------- */
+
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .contact-left,
+  .contact-right {
+    padding: 30px;
+  }
+
+
+  /* ---------- STATS ---------- */
 
   .stats-grid {
     grid-template-columns: 1fr;
@@ -2147,10 +2377,43 @@ footer {
     line-height: 1.4;
   }
 
-  .section-title span {
-    font-size: 14px;
 
-    letter-spacing: 3px;
+  /* ---------- CTA ---------- */
+
+  .cta-box {
+    padding: 60px 30px;
+
+    border-radius: 25px;
+  }
+
+  .cta-box h2 {
+    font-size: 40px;
+  }
+
+  .cta-box p {
+    font-size: 16px;
+  }
+
+
+  /* ---------- COMING SOON ---------- */
+
+  .coming-content {
+    padding: 60px 30px;
+  }
+
+  .coming-content h2 {
+    font-size: 34px;
+  }
+
+
+  /* ---------- FOOTER ---------- */
+
+  footer {
+    padding-top: 60px;
+  }
+
+  .footer-container {
+    gap: 35px;
   }
 }
 
@@ -2160,6 +2423,1297 @@ footer {
 ================================================== */
 
 @media (max-width: 576px) {
+
+  /* ---------- GENERAL ---------- */
+
+  section {
+    padding: 70px 0;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+
+  /* ---------- HERO ---------- */
+
+  .hero {
+    padding-top: 110px;
+
+    padding-bottom: 70px;
+  }
+
+  .hero-tag {
+    font-size: 13px;
+
+    padding: 8px 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 38px;
+
+    line-height: 1.15;
+  }
+
+  .hero-content h2 {
+    font-size: 22px;
+  }
+
+  .hero-content h3 {
+    font-size: 18px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+
+    line-height: 1.8;
+  }
+
+  .image-box {
+    width: 260px;
+
+    height: 260px;
+
+    padding: 8px;
+  }
+
+  .image-box img {
+    border-width: 6px;
+  }
+
+
+  /* ---------- HERO BUTTONS ---------- */
+
+  .hero-buttons {
+    gap: 12px;
+
+    margin-bottom: 40px;
+  }
+
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-secondary {
+    width: 100%;
+
+    max-width: 300px;
+
+    padding: 14px 25px;
+  }
+
+
+  /* ---------- HERO STATS ---------- */
+
+  .hero-stats {
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 20px;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat h2 {
+    font-size: 32px;
+  }
+
+
+  /* ---------- SECTION TITLE ---------- */
+
+  .section-title {
+    margin-bottom: 45px;
+
+    padding: 0 15px;
+  }
+
+  .section-title h2 {
+    font-size: 30px;
+  }
+
+  .section-title span {
+    font-size: 13px;
+
+    letter-spacing: 2px;
+  }
+
+  .section-title p {
+    font-size: 14px;
+  }
+
+
+  /* ---------- ABOUT ---------- */
+
+  .about-content h3 {
+    font-size: 28px;
+  }
+
+  .about-content p {
+    font-size: 14px;
+  }
+
+  .info-box {
+    padding: 25px 20px;
+  }
+
+
+  /* ---------- SKILLS ---------- */
+
+  .skill-card {
+    padding: 30px 20px;
+  }
+
+  .skill-card i {
+    font-size: 50px;
+  }
+
+  .skill-card h3 {
+    font-size: 22px;
+  }
+
+  .skill-card p {
+    font-size: 14px;
+  }
+
+
+  /* ---------- PROJECTS ---------- */
+
+  .project-content {
+    padding: 20px;
+  }
+
+  .project-content h3 {
+    font-size: 23px;
+  }
+
+  .project-content p {
+    font-size: 14px;
+  }
+
+  .project-buttons {
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  .project-buttons a {
+    width: 100%;
+  }
+
+
+  /* ---------- DT PERFUME ---------- */
+
+  .dt-perfume-section {
+    padding: 70px 0;
+  }
+
+  .dt-perfume-card {
+    padding: 30px 20px;
+
+    border-radius: 22px;
+
+    gap: 30px;
+  }
+
+  .dt-perfume-content h2 {
+    font-size: 30px;
+  }
+
+  .dt-perfume-content p {
+    font-size: 14px;
+
+    line-height: 1.8;
+  }
+
+  .dt-perfume-image::before {
+    width: 250px;
+
+    height: 250px;
+  }
+
+  .dt-perfume-image img {
+    height: 220px;
+
+    border-radius: 18px;
+  }
+
+  .dt-perfume-features {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+
+    text-align: left;
+
+    margin: 25px 0;
+  }
+
+  .dt-perfume-buttons {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .dt-live-btn,
+  .dt-github-btn {
+    width: 100%;
+  }
+
+  .dt-technologies {
+    justify-content: center;
+  }
+
+
+  /* ---------- CERTIFICATES ---------- */
+
+  .certificate-card img {
+    height: 210px;
+  }
+
+  .certificate-content {
+    padding: 20px;
+  }
+
+
+  /* ---------- CONTACT ---------- */
+
+  .contact-left,
+  .contact-right {
+    padding: 25px;
+  }
+
+  .contact-left h3 {
+    font-size: 26px;
+  }
+
+  .contact-left p {
+    font-size: 14px;
+  }
+
+  .contact-feature {
+    align-items: flex-start;
+  }
+
+  .contact-feature i {
+    width: 45px;
+
+    height: 45px;
+
+    font-size: 18px;
+  }
+
+  .contact-feature p {
+    word-break: break-word;
+  }
+
+  .input-group input,
+  .input-group textarea {
+    font-size: 14px;
+
+    padding: 14px 16px;
+  }
+
+  .input-group textarea {
+    min-height: 150px;
+  }
+
+
+  /* ---------- CTA ---------- */
+
+  .cta-box {
+    padding: 50px 20px;
+  }
+
+  .cta-box h2 {
+    font-size: 30px;
+  }
+
+  .cta-box p {
+    font-size: 14px;
+  }
+
+
+  /* ---------- STATS ---------- */
+
+  .stats-grid {
+    padding: 0 15px;
+
+    gap: 15px;
+  }
+
+  .stat-card {
+    min-height: 210px;
+
+    padding: 25px 15px;
+
+    border-radius: 25px;
+  }
+
+  .stat-card i {
+    width: 58px;
+
+    height: 58px;
+
+    font-size: 32px;
+  }
+
+  .stat-card h3 {
+    font-size: 38px;
+  }
+
+  .stat-card p {
+    font-size: 15px;
+  }
+
+
+  /* ---------- COMING SOON ---------- */
+
+  .coming-content {
+    padding: 50px 25px;
+
+    border-radius: 25px;
+  }
+
+  .coming-content > i {
+    width: 65px;
+
+    height: 65px;
+
+    font-size: 26px;
+  }
+
+  .coming-content h2 {
+    font-size: 30px;
+  }
+
+  .coming-content p {
+    font-size: 14px;
+  }
+
+
+  /* ---------- FOOTER ---------- */
+
+  footer {
+    padding-top: 55px;
+  }
+
+  .footer-about h2 {
+    font-size: 28px;
+  }
+
+  .footer-about p {
+    font-size: 14px;
+  }
+
+  .social-icons {
+    flex-wrap: wrap;
+
+    justify-content: center;
+  }
+
+  .copyright {
+    margin-top: 40px;
+
+    font-size: 13px;
+  }
+}/* ==================================================
+   CERTIFICATES
+================================================== */
+
+.certificate-gallery {
+  background: var(--dark);
+}
+
+.certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+.certificate-card {
+  background: var(--card);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+}
+
+.certificate-card:hover {
+  transform: translateY(-12px);
+  border-color: var(--primary);
+}
+
+.certificate-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: 0.5s ease;
+}
+
+.certificate-card:hover img {
+  transform: scale(1.08);
+}
+
+.certificate-content {
+  padding: 25px;
+}
+
+.certificate-content h3 {
+  margin-bottom: 12px;
+  font-size: 22px;
+}
+
+.certificate-content p {
+  color: var(--gray);
+  line-height: 1.8;
+}
+
+.issuer {
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+
+/* ==================================================
+   CONTACT
+================================================== */
+
+.contact {
+  background: var(--dark-light);
+}
+
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.contact-left,
+.contact-right {
+  background: var(--card);
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.contact-left h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.contact-left > p {
+  color: var(--gray);
+  line-height: 1.9;
+}
+
+.contact-feature {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.contact-feature i {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: rgba(99, 102, 241, 0.15);
+  color: var(--primary);
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.contact-feature h4 {
+  margin-bottom: 4px;
+}
+
+.contact-feature p {
+  margin: 0;
+  color: var(--gray);
+  word-break: break-word;
+}
+
+
+/* ==================================================
+   CONTACT FORM
+================================================== */
+
+.contact-right form {
+  width: 100%;
+}
+
+.input-group {
+  margin-bottom: 22px;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 16px 20px;
+  border: 1px solid transparent;
+  outline: none;
+  border-radius: 12px;
+  background: #1f2937;
+  color: white;
+  font-size: 16px;
+  font-family: inherit;
+  transition: 0.3s ease;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+  color: #9ca3af;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.08);
+}
+
+.input-group textarea {
+  resize: vertical;
+  min-height: 180px;
+}
+
+.contact-right .btn-primary {
+  width: 100%;
+}
+
+
+/* ==================================================
+   CONTACT FORM STATUS MESSAGE
+================================================== */
+
+.form-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 15px;
+  animation: messageSlide 0.4s ease;
+}
+
+.form-message i {
+  font-size: 25px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.form-message h4 {
+  font-size: 17px;
+  margin-bottom: 6px;
+}
+
+.form-message p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.success-message {
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.35);
+}
+
+.success-message i,
+.success-message h4 {
+  color: #22c55e;
+}
+
+.error-message {
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+}
+
+.error-message i,
+.error-message h4 {
+  color: #ef4444;
+}
+
+.contact-right button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@keyframes messageSlide {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ==================================================
+   CTA
+================================================== */
+
+.cta {
+  background: var(--dark);
+}
+
+.cta-box {
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    #1b2240,
+    #10192d
+  );
+  border-radius: 30px;
+  padding: 80px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.cta-box h2 {
+  font-size: 50px;
+  margin-bottom: 25px;
+}
+
+.cta-box p {
+  color: var(--gray);
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+footer {
+  background: #070b17;
+  padding: 80px 0 30px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 60px;
+}
+
+.footer-about h2 {
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+.footer-about p {
+  color: var(--gray);
+  line-height: 1.9;
+}
+
+.footer-links h3,
+.footer-social h3 {
+  margin-bottom: 20px;
+}
+
+.footer-links ul li {
+  margin-bottom: 15px;
+}
+
+.footer-links a {
+  color: var(--gray);
+  transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--primary);
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: var(--card);
+  border: 1px solid var(--border);
+  transition: var(--transition);
+}
+
+.social-icons a:hover {
+  background: var(--primary);
+  transform: translateY(-6px);
+}
+
+.social-icons i {
+  color: white;
+  font-size: 20px;
+}
+
+.copyright {
+  margin-top: 60px;
+  padding-top: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+  color: var(--gray);
+}
+
+
+/* ==================================================
+   MY PROGRESS / DEVELOPMENT JOURNEY
+================================================== */
+
+.stats-grid {
+  width: 100%;
+  max-width: 1200px;
+  margin: 60px auto 0;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  box-sizing: border-box;
+}
+
+.stat-card {
+  width: 100%;
+  min-width: 0;
+  min-height: 280px;
+  padding: 35px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgba(35, 45, 85, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 35px;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.stat-card::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: rgba(99, 102, 241, 0.12);
+  border-radius: 50%;
+  top: -60px;
+  right: -60px;
+  transition: 0.4s ease;
+}
+
+.stat-card:hover::before {
+  transform: scale(2);
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--primary);
+  box-shadow:
+    0 20px 50px rgba(99, 102, 241, 0.25);
+}
+
+.stat-card i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: rgba(99, 102, 241, 0.15);
+  color: var(--accent);
+  font-size: 28px;
+  transition: 0.4s ease;
+}
+
+.stat-card:hover i {
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary)
+  );
+  color: white;
+  transform: rotateY(360deg);
+}
+
+.stat-card h3 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--accent)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stat-card p {
+  color: var(--gray);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+
+/* ==================================================
+   MORE PROJECTS COMING SOON
+================================================== */
+
+.coming-content {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 70px 50px;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.12),
+    rgba(6, 182, 212, 0.06)
+  );
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.coming-content::before {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(
+    circle,
+    rgba(99, 102, 241, 0.18),
+    transparent 70%
+  );
+  top: -120px;
+  right: -100px;
+  filter: blur(20px);
+}
+
+.coming-content::after {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(
+    circle,
+    rgba(6, 182, 212, 0.12),
+    transparent 70%
+  );
+  bottom: -120px;
+  left: -100px;
+  filter: blur(20px);
+}
+
+.coming-content:hover {
+  transform: translateY(-8px);
+  border-color: var(--primary);
+  box-shadow:
+    0 25px 60px rgba(99, 102, 241, 0.20);
+}
+
+.coming-content > i {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 75px;
+  height: 75px;
+  margin-bottom: 25px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary)
+  );
+  color: white;
+  font-size: 30px;
+  box-shadow:
+    0 10px 30px rgba(99, 102, 241, 0.35);
+  animation: rocketFloat 3s ease-in-out infinite;
+}
+
+.coming-content h2 {
+  position: relative;
+  z-index: 2;
+  font-size: 38px;
+  margin-bottom: 20px;
+}
+
+.coming-content p {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  margin: auto;
+  color: var(--gray);
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+@keyframes rocketFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+/* ==================================================
+   LARGE LAPTOP - 1200px
+================================================== */
+
+@media (max-width: 1200px) {
+
+  .container,
+  .hero-container,
+  .navbar {
+    width: 92%;
+  }
+
+  .hero-content h1 {
+    font-size: 60px;
+  }
+
+  .image-box {
+    width: 380px;
+    height: 380px;
+  }
+
+  .dt-perfume-card {
+    gap: 40px;
+    padding: 40px;
+  }
+
+  .stats-grid {
+    padding: 0 25px;
+  }
+}
+
+
+/* ==================================================
+   LAPTOP / TABLET - 992px
+================================================== */
+
+@media (max-width: 992px) {
+
+  .hero-container {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 50px;
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
+  .hero-image {
+    justify-content: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-stats {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .certificate-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .stat-card {
+    min-height: 260px;
+  }
+
+  .dt-perfume-card {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .dt-perfume-image {
+    order: 1;
+  }
+
+  .dt-perfume-content {
+    order: 2;
+  }
+}
+
+
+/* ==================================================
+   TABLET - 768px
+================================================== */
+
+@media (max-width: 768px) {
+
+  section {
+    padding: 90px 0;
+  }
+
+  .navbar {
+    height: 75px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .resume-btn {
+    display: none;
+  }
+
+  .hero {
+    padding-top: 120px;
+  }
+
+  .hero-content h1 {
+    font-size: 48px;
+  }
+
+  .hero-content h2 {
+    font-size: 26px;
+  }
+
+  .hero-content h3 {
+    font-size: 20px;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+
+  .image-box {
+    width: 320px;
+    height: 320px;
+  }
+
+  .section-title {
+    margin-bottom: 50px;
+  }
+
+  .section-title h2 {
+    font-size: 38px;
+  }
+
+  .section-title span {
+    font-size: 14px;
+    letter-spacing: 3px;
+  }
+
+  .about-content h3 {
+    font-size: 32px;
+  }
+
+  .about-info {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid,
+  .projects-grid,
+  .certificate-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-card ul {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-secondary {
+    width: min(100%, 320px);
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .dt-perfume-card {
+    padding: 35px 25px;
+  }
+
+  .dt-perfume-content h2 {
+    font-size: 34px;
+  }
+
+  .dt-perfume-image img {
+    height: 280px;
+  }
+
+  .dt-perfume-buttons {
+    flex-wrap: wrap;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 40px;
+    padding: 0 20px;
+  }
+
+  .stat-card {
+    min-height: 230px;
+    padding: 30px 20px;
+    border-radius: 28px;
+  }
+
+  .stat-card i {
+    font-size: 38px;
+    margin-bottom: 20px;
+  }
+
+  .stat-card h3 {
+    font-size: 42px;
+    margin-bottom: 10px;
+  }
+
+  .stat-card p {
+    font-size: 17px;
+  }
+
+  .contact-wrapper {
+    gap: 25px;
+  }
+
+  .contact-left,
+  .contact-right {
+    padding: 30px;
+  }
+
+  .cta-box {
+    padding: 60px 30px;
+  }
+
+  .cta-box h2 {
+    font-size: 40px;
+  }
+
+  .coming-content {
+    padding: 60px 30px;
+  }
+
+  /* MOBILE MENU */
+
+  .navbar {
+    position: relative;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+    margin-right: 15px;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding: 20px 0;
+    background: rgba(11, 16, 32, 0.98);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+  }
+
+  .nav-links.show-menu {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links a {
+    display: block;
+    width: 100%;
+    padding: 14px 20px;
+  }
+
+  .nav-links a:hover {
+    background: rgba(99, 102, 241, 0.12);
+  }
+}
+
+
+/* ==================================================
+   MOBILE - 576px
+================================================== */
+
+@media (max-width: 576px) {
+
+  .container {
+    width: 92%;
+  }
 
   section {
     padding: 80px 0;
@@ -2183,26 +3737,40 @@ footer {
 
   .hero-content p {
     font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .hero-tag {
+    font-size: 13px;
+    padding: 8px 14px;
   }
 
   .image-box {
     width: 260px;
-
     height: 260px;
   }
 
   .hero-stats {
     flex-direction: column;
-
     gap: 20px;
+    align-items: center;
   }
 
   .stat {
     text-align: center;
   }
 
+  .section-title {
+    padding: 0 15px;
+  }
+
   .section-title h2 {
     font-size: 30px;
+  }
+
+  .section-title span {
+    font-size: 12px;
+    letter-spacing: 2px;
   }
 
   .about-content h3 {
@@ -2226,8 +3794,28 @@ footer {
     padding: 25px;
   }
 
+  .contact-left h3 {
+    font-size: 25px;
+  }
+
+  .contact-feature {
+    align-items: flex-start;
+  }
+
+  .contact-feature p {
+    font-size: 14px;
+  }
+
   .project-content {
     padding: 20px;
+  }
+
+  .project-content h3 {
+    font-size: 22px;
+  }
+
+  .project-buttons {
+    flex-direction: column;
   }
 
   .skill-card {
@@ -2240,7 +3828,6 @@ footer {
 
   .dt-perfume-card {
     padding: 30px 20px;
-
     border-radius: 22px;
   }
 
@@ -2269,16 +3856,70 @@ footer {
     height: 220px;
   }
 
+  .certificate-card img {
+    height: 200px;
+  }
+
   .coming-content {
     padding: 50px 25px;
+    border-radius: 22px;
   }
 
   .coming-content h2 {
     font-size: 30px;
   }
 
+  .coming-content p {
+    font-size: 14px;
+  }
+
+  .coming-content > i {
+    width: 65px;
+    height: 65px;
+    font-size: 26px;
+  }
+
+  .cta-box {
+    padding: 50px 20px;
+    border-radius: 22px;
+  }
+
+  .cta-box h2 {
+    font-size: 32px;
+  }
+
+  .cta-box p {
+    font-size: 15px;
+  }
+
   footer {
     padding-top: 60px;
+  }
+
+  .footer-about h2 {
+    font-size: 28px;
+  }
+
+  .social-icons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .form-message {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .form-message i {
+    font-size: 22px;
+  }
+
+  .form-message h4 {
+    font-size: 15px;
+  }
+
+  .form-message p {
+    font-size: 13px;
   }
 }
 
@@ -2297,13 +3938,16 @@ footer {
     font-size: 20px;
   }
 
+  .hero-content h3 {
+    font-size: 17px;
+  }
+
   .hero-tag {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .image-box {
     width: 220px;
-
     height: 220px;
   }
 
@@ -2315,11 +3959,14 @@ footer {
     font-size: 26px;
   }
 
+  .section-title span {
+    font-size: 11px;
+  }
+
   .btn-primary,
   .btn-secondary,
   .resume-btn {
     width: 100%;
-
     text-align: center;
   }
 
@@ -2333,15 +3980,12 @@ footer {
 
   .stats-grid {
     padding: 0 15px;
-
     gap: 15px;
   }
 
   .stat-card {
     min-height: 210px;
-
     padding: 25px 15px;
-
     border-radius: 25px;
   }
 
@@ -2354,200 +3998,37 @@ footer {
   }
 
   .stat-card p {
-    font-size: 16px;
-  }
-
-  .section-title {
-    padding: 0 15px;
+    font-size: 15px;
   }
 
   .dt-perfume-card {
     padding: 25px 15px;
   }
-}
-/* ==========================================
-   CONTACT FORM STATUS MESSAGE
-========================================== */
 
-.form-message {
-  display: flex;
-  align-items: flex-start;
-  gap: 15px;
-
-  margin-top: 25px;
-  padding: 20px;
-
-  border-radius: 15px;
-
-  animation: messageSlide 0.4s ease;
-}
-
-.form-message i {
-  font-size: 25px;
-  margin-top: 2px;
-}
-
-.form-message h4 {
-  font-size: 17px;
-  margin-bottom: 6px;
-}
-
-.form-message p {
-  margin: 0;
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-/* SUCCESS */
-
-.success-message {
-  background: rgba(34, 197, 94, 0.12);
-  border: 1px solid rgba(34, 197, 94, 0.35);
-}
-
-.success-message i {
-  color: #22c55e;
-}
-
-.success-message h4 {
-  color: #22c55e;
-}
-
-/* ERROR */
-
-.error-message {
-  background: rgba(239, 68, 68, 0.12);
-  border: 1px solid rgba(239, 68, 68, 0.35);
-}
-
-.error-message i {
-  color: #ef4444;
-}
-
-.error-message h4 {
-  color: #ef4444;
-}
-
-/* BUTTON */
-
-.contact-right button:disabled {
-  opacity: 0.7;
-  cursor: not-allowed;
-  transform: none;
-}
-
-/* ANIMATION */
-
-@keyframes messageSlide {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
+  .dt-perfume-content h2 {
+    font-size: 27px;
   }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* MOBILE */
-
-@media (max-width: 576px) {
-  .form-message {
-    padding: 16px;
-    gap: 12px;
+  .dt-perfume-image img {
+    height: 190px;
   }
 
-  .form-message i {
-    font-size: 22px;
+  .contact-left,
+  .contact-right {
+    padding: 20px 16px;
   }
 
-  .form-message h4 {
-    font-size: 15px;
+  .input-group input,
+  .input-group textarea {
+    font-size: 14px;
+    padding: 14px 15px;
   }
 
-  .form-message p {
-    font-size: 13px;
-  }
-}
-/* ==========================================
-   MOBILE MENU
-========================================== */
-
-.menu-toggle {
-  display: none;
-
-  background: transparent;
-  border: none;
-
-  color: white;
-  font-size: 26px;
-
-  cursor: pointer;
-
-  z-index: 1001;
-}
-
-/* TABLET + MOBILE */
-
-@media (max-width: 768px) {
-
-  .navbar {
-    position: relative;
+  .coming-content {
+    padding: 40px 18px;
   }
 
-  .menu-toggle {
-    display: block;
-    margin-left: auto;
-    margin-right: 15px;
-  }
-
-  .nav-links {
-    display: none;
-
-    position: absolute;
-
-    top: 75px;
-    left: 0;
-
-    width: 100%;
-
-    flex-direction: column;
-    align-items: center;
-
-    gap: 0;
-
-    padding: 20px 0;
-
-    background: rgba(11, 16, 32, 0.98);
-
-    border-bottom: 1px solid rgba(255,255,255,.08);
-
-    backdrop-filter: blur(20px);
-  }
-
-  .nav-links.show-menu {
-    display: flex;
-  }
-
-  .nav-links li {
-    width: 100%;
-    text-align: center;
-  }
-
-  .nav-links a {
-    display: block;
-
-    width: 100%;
-
-    padding: 14px 20px;
-  }
-
-  .nav-links a:hover {
-    background: rgba(99,102,241,.12);
-  }
-
-  .resume-btn {
-    display: none;
+  .coming-content h2 {
+    font-size: 26px;
   }
 }

@@ -26,22 +26,28 @@ function Skills() {
       description: "Developing responsive layouts efficiently.",
     },
     {
+      icon: "fab fa-wordpress",
+      title: "WordPress",
+      description: "Creating and customizing responsive WordPress websites.",
+    },
+    {
       icon: "fab fa-git-alt",
       title: "Git & GitHub",
       description: "Managing projects with version control.",
     },
-   
-  ]
+  ];
 
   return (
     <section className="skills-preview" id="skills">
       <div className="container">
 
+        {/* SECTION TITLE */}
         <div className="section-title">
           <span>My Expertise</span>
           <h2>Skills</h2>
         </div>
 
+        {/* SKILLS GRID */}
         <div className="skills-grid">
           {skills.map((skill) => (
             <div className="skill-card" key={skill.title}>
@@ -58,7 +64,7 @@ function Skills() {
 
       </div>
     </section>
-  )
+  );
 }
 
-export default Skills
+export default Skills;

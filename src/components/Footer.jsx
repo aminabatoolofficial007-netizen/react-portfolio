@@ -16,7 +16,7 @@ function Footer() {
             </p>
           </div>
 
-          {/* LINKS */}
+          {/* QUICK LINKS */}
           <div className="footer-links">
             <h3>Quick Links</h3>
 
@@ -47,28 +47,37 @@ function Footer() {
             </ul>
           </div>
 
-          {/* SOCIAL */}
+          {/* SOCIAL LINKS */}
           <div className="footer-social">
             <h3>Follow Me</h3>
 
             <div className="social-icons">
 
+              {/* GitHub */}
               <a
                 href="https://github.com/aminabatoolofficial007-netizen"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="GitHub"
               >
                 <i className="fab fa-github"></i>
               </a>
 
+              {/* LinkedIn */}
               <a
-                href="https://www.linkedin.com/in/amina-batool-0104043a8?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                href="https://www.linkedin.com/in/amina-batool-0104043a8"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="LinkedIn"
               >
                 <i className="fab fa-linkedin-in"></i>
               </a>
 
+              {/* Instagram */}
               <a
-                href="https://www.instagram.com/code._architect?igsh=MWZmMXloMW1qc2JnNw=="
+                href="https://www.instagram.com/code._architect"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Instagram"
               >
                 <i className="fab fa-instagram"></i>
@@ -89,7 +98,7 @@ function Footer() {
 
       </div>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

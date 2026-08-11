@@ -3,14 +3,17 @@ function About() {
     <section className="about-preview" id="about">
       <div className="container">
 
+        {/* SECTION TITLE */}
         <div className="section-title">
           <span>Get To Know Me</span>
           <h2>About Me</h2>
         </div>
 
+        {/* ABOUT CONTENT */}
         <div className="about-grid">
 
           <div className="about-content">
+
             <h3>I'm Amina Batool</h3>
 
             <p>
@@ -26,6 +29,7 @@ function About() {
               projects.
             </p>
 
+            {/* ABOUT INFORMATION */}
             <div className="about-info">
 
               <div className="info-box">
@@ -49,13 +53,14 @@ function About() {
               </div>
 
             </div>
+
           </div>
 
         </div>
 
       </div>
     </section>
-  )
+  );
 }
 
-export default About
+export default About;

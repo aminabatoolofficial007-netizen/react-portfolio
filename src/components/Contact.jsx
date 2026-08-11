@@ -43,7 +43,6 @@ function Contact() {
     <section className="contact" id="contact">
       <div className="container">
 
-        {/* SECTION TITLE */}
         <div className="section-title">
           <span>Get In Touch</span>
           <h2>Contact Me</h2>
@@ -62,7 +61,6 @@ function Contact() {
               from you.
             </p>
 
-            {/* EMAIL */}
             <div className="contact-feature">
               <i className="fas fa-envelope"></i>
 
@@ -72,7 +70,6 @@ function Contact() {
               </div>
             </div>
 
-            {/* PHONE */}
             <div className="contact-feature">
               <i className="fas fa-phone"></i>
 
@@ -82,7 +79,6 @@ function Contact() {
               </div>
             </div>
 
-            {/* LOCATION */}
             <div className="contact-feature">
               <i className="fas fa-map-marker-alt"></i>
 
@@ -175,30 +171,37 @@ function Contact() {
             {/* SUCCESS MESSAGE */}
             {status === "success" && (
               <div className="form-message success-message">
+
                 <i className="fas fa-check-circle"></i>
 
                 <div>
                   <h4>Message Sent Successfully! 🎉</h4>
+
                   <p>
-                    Thank you for reaching out. I’ve received your message
-                    and will get back to you as soon as possible.
+                    Thank you for reaching out! Your message has been
+                    received successfully. I’ll get back to you as soon
+                    as possible.
                   </p>
                 </div>
+
               </div>
             )}
 
             {/* ERROR MESSAGE */}
             {status === "error" && (
               <div className="form-message error-message">
+
                 <i className="fas fa-exclamation-circle"></i>
 
                 <div>
                   <h4>Something Went Wrong</h4>
+
                   <p>
-                    Your message could not be sent. Please try again or
-                    contact me directly via email.
+                    Your message could not be sent. Please try again
+                    or contact me directly via email.
                   </p>
                 </div>
+
               </div>
             )}
 
