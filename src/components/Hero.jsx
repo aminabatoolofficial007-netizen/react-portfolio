@@ -41,6 +41,15 @@ function Hero() {
               Contact Me
             </a>
 
+            {/* DOWNLOAD CV */}
+            <a
+              href="/Amina-Batool cv(1).pdf"
+              download="Amina-Batool-CV.pdf"
+              className="btn-secondary"
+            >
+              📄 Download CV
+            </a>
+
           </div>
 
         </div>

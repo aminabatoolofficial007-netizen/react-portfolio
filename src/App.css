@@ -379,31 +379,31 @@ header {
   min-height: 100vh;
 
   display: flex;
-
   align-items: center;
 
   padding-top: 130px;
+  padding-bottom: 80px;
 }
 
 .hero-container {
   width: 90%;
-
   max-width: 1200px;
 
   margin: auto;
 
   display: flex;
-
   justify-content: space-between;
-
   align-items: center;
 
   gap: 80px;
 }
 
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
 .hero-content {
   flex: 1;
-
   animation: fadeUp 1s ease;
 }
 
@@ -413,7 +413,6 @@ header {
   padding: 10px 18px;
 
   background: rgba(99, 102, 241, 0.15);
-
   color: var(--accent);
 
   border-radius: 50px;
@@ -433,24 +432,12 @@ header {
   font-weight: 700;
 }
 
-.hero-content h1 span {
-  color: var(--primary);
-}
-
 .hero-content h2 {
   font-size: 34px;
 
   color: var(--gray);
 
-  margin-bottom: 10px;
-}
-
-.hero-content h3 {
-  color: var(--accent);
-
-  font-size: 22px;
-
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .hero-content p {
@@ -460,39 +447,113 @@ header {
 
   font-size: 17px;
 
+  max-width: 650px;
+
   margin-bottom: 35px;
 }
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
 
 .hero-buttons {
   display: flex;
 
-  gap: 20px;
+  align-items: center;
 
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+
+  gap: 15px;
+
+  margin-bottom: 20px;
 }
 
-.hero-stats {
-  display: flex;
+/* Existing primary button */
 
-  gap: 45px;
+.btn-primary,
+.btn-secondary,
+.btn-cv {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 48px;
+
+  padding: 13px 22px;
+
+  border-radius: 10px;
+
+  text-decoration: none;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease;
 }
 
-.stat {
-  text-align: left;
+/* View My Work */
+
+.btn-primary {
+  background: var(--primary);
+
+  color: white;
+
+  border: 2px solid var(--primary);
 }
 
-.stat h2 {
-  font-size: 36px;
+.btn-primary:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.25);
+}
+
+
+/* Contact Me */
+
+.btn-secondary {
+  background: transparent;
 
   color: var(--primary);
 
-  margin-bottom: 5px;
+  border: 2px solid var(--primary);
 }
 
-.stat p {
-  color: var(--gray);
+.btn-secondary:hover {
+  transform: translateY(-3px);
 
-  font-size: 15px;
+  background: var(--primary);
+
+  color: white;
+}
+
+
+/* Download CV */
+
+.btn-cv {
+  background: transparent;
+
+  color: var(--accent);
+
+  border: 2px solid var(--accent);
+}
+
+.btn-cv:hover {
+  transform: translateY(-3px);
+
+  background: var(--accent);
+
+  color: white;
+
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.20);
 }
 
 
@@ -547,40 +608,191 @@ header {
 
 
 /* =========================================================
-   ABOUT SECTION
+   TABLET RESPONSIVE
 ========================================================= */
 
-.about-preview,
-.journey,
-.education {
-  background: var(--dark-light);
+@media (max-width: 1000px) {
+
+  .hero {
+    padding-top: 120px;
+  }
+
+  .hero-container {
+    gap: 40px;
+  }
+
+  .hero-content h1 {
+    font-size: 55px;
+  }
+
+  .hero-content h2 {
+    font-size: 28px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .image-box {
+    width: 350px;
+    height: 350px;
+  }
+
 }
 
-.about-grid {
-  display: grid;
 
-  grid-template-columns: 1.2fr 1fr;
+/* =========================================================
+   MOBILE RESPONSIVE
+========================================================= */
 
-  gap: 70px;
+@media (max-width: 768px) {
 
-  align-items: center;
+  .hero {
+    min-height: auto;
+
+    padding-top: 110px;
+    padding-bottom: 60px;
+  }
+
+  .hero-container {
+    width: 92%;
+
+    flex-direction: column;
+
+    text-align: center;
+
+    gap: 50px;
+  }
+
+
+  /* CONTENT */
+
+  .hero-content {
+    width: 100%;
+  }
+
+  .hero-tag {
+    font-size: 14px;
+
+    padding: 9px 16px;
+
+    margin-bottom: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 46px;
+
+    margin-bottom: 12px;
+  }
+
+  .hero-content h2 {
+    font-size: 25px;
+
+    margin-bottom: 18px;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    margin: 0 auto 30px;
+
+    max-width: 600px;
+  }
+
+
+  /* BUTTONS */
+
+  .hero-buttons {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 12px;
+
+    margin-bottom: 0;
+  }
+
+  .btn-primary,
+  .btn-secondary,
+  .btn-cv {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    min-height: 50px;
+
+    padding: 13px 20px;
+
+    font-size: 15px;
+  }
+
+
+  /* IMAGE */
+
+  .hero-image {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+  .image-box {
+    width: 290px;
+
+    height: 290px;
+
+    padding: 8px;
+  }
+
+  .image-box img {
+    border-width: 6px;
+  }
+
 }
 
-.about-content h3 {
-  font-size: 38px;
 
-  margin-bottom: 25px;
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .hero {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+
+  .hero-container {
+    width: 90%;
+
+    gap: 40px;
+  }
+
+  .hero-content h1 {
+    font-size: 38px;
+  }
+
+  .hero-content h2 {
+    font-size: 22px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+
+    line-height: 1.75;
+  }
+
+  .image-box {
+    width: 240px;
+    height: 240px;
+  }
+
 }
-
-.about-content p {
-  color: var(--gray);
-
-  line-height: 1.9;
-
-  margin-bottom: 25px;
-}
-
-
 /* =========================================================
    ABOUT INFO
 ========================================================= */
@@ -4031,4 +4243,266 @@ footer {
   .coming-content h2 {
     font-size: 26px;
   }
+}
+/* =========================================================
+   REVIEWS / TESTIMONIALS
+========================================================= */
+
+.reviews-section {
+  background: var(--dark);
+  padding: 110px 0;
+}
+
+.reviews-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 30px;
+}
+
+
+/* =========================================================
+   REVIEW CARD
+========================================================= */
+
+.review-card {
+  position: relative;
+
+  background: var(--card);
+
+  border: 1px solid var(--border);
+
+  border-radius: 22px;
+
+  padding: 35px 30px;
+
+  box-shadow: var(--shadow);
+
+  transition: var(--transition);
+
+  overflow: hidden;
+}
+
+.review-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 150px;
+  height: 150px;
+
+  top: -80px;
+  right: -80px;
+
+  border-radius: 50%;
+
+  background: rgba(99, 102, 241, 0.10);
+
+  transition: 0.4s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-10px);
+
+  border-color: var(--primary);
+}
+
+.review-card:hover::before {
+  transform: scale(1.5);
+}
+
+
+/* =========================================================
+   QUOTE ICON
+========================================================= */
+
+.quote-icon {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(99, 102, 241, 0.15);
+
+  color: var(--accent);
+
+  font-size: 20px;
+
+  margin-bottom: 20px;
+
+  position: relative;
+
+  z-index: 1;
+}
+
+
+/* =========================================================
+   STARS
+========================================================= */
+
+.review-stars {
+  display: flex;
+
+  gap: 5px;
+
+  margin-bottom: 20px;
+
+  position: relative;
+
+  z-index: 1;
+}
+
+.review-stars i {
+  color: #fbbf24;
+
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   REVIEW TEXT
+========================================================= */
+
+.review-text {
+  color: var(--gray);
+
+  font-size: 15px;
+
+  line-height: 1.9;
+
+  margin-bottom: 30px;
+
+  position: relative;
+
+  z-index: 1;
+}
+
+
+/* =========================================================
+   REVIEW AUTHOR
+========================================================= */
+
+.review-author {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  border-top: 1px solid var(--border);
+
+  padding-top: 22px;
+
+  position: relative;
+
+  z-index: 1;
+}
+
+.review-avatar {
+  width: 50px;
+  height: 50px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary)
+  );
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: 700;
+}
+
+.review-author h4 {
+  margin: 0 0 4px;
+
+  font-size: 17px;
+
+  color: white;
+}
+
+.review-author span {
+  color: var(--accent);
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .reviews-section {
+    padding: 80px 0;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .review-card {
+    padding: 30px 25px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .reviews-section {
+    padding: 70px 0;
+  }
+
+  .review-card {
+    padding: 25px 20px;
+
+    border-radius: 18px;
+  }
+
+  .review-text {
+    font-size: 14px;
+
+    line-height: 1.8;
+  }
+
 }

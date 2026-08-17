@@ -24,7 +24,7 @@ function Projects() {
       title: "Portfolio Website",
       description:
         "A personal responsive portfolio website showcasing my skills, projects and experience.",
-      image: "/portfolio image.jpeg",
+      image: "/portfolio.jpeg",
       liveLink: "",
       githubLink:
         "https://github.com/aminabatoolofficial007-netizen/react-portfolio",
